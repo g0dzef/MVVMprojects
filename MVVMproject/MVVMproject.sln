@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMproject", "MVVMproject\MVVMproject.csproj", "{8B2494EB-2066-4FD7-AD2D-29B0D99ABFDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B2494EB-2066-4FD7-AD2D-29B0D99ABFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B2494EB-2066-4FD7-AD2D-29B0D99ABFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B2494EB-2066-4FD7-AD2D-29B0D99ABFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B2494EB-2066-4FD7-AD2D-29B0D99ABFDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB99BFA5-F18D-4E2C-AC21-4F1588FC850A}
+	EndGlobalSection
+EndGlobal

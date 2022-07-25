@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace MVVMproject.MVVM.ViewModels.Base
 {
-    internal abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
+    public abstract class BaseViewModel : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler? PropertyChanged;
 

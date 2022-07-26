@@ -10,5 +10,6 @@ namespace MVVMproject.MVVM.ViewModels
     public class ViewModelLocator
     {
         public MainWindowViewModel MainWindowVM => App.Host.Services.GetRequiredService<MainWindowViewModel>();
+        public ContactsViewModel ContactsVM => App.Host.Services.GetRequiredService<ContactsViewModel>();
     }
 }

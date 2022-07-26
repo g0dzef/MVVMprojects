@@ -12,6 +12,7 @@ namespace MVVMproject.MVVM.ViewModels
         public static IServiceCollection RegisterViewModel(this IServiceCollection services)
         {
             services.AddSingleton<MainWindowViewModel>();
+            services.AddTransient<ContactsViewModel>();
 
             return services;
         }

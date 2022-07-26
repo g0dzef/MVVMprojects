@@ -14,6 +14,8 @@ namespace MVVMproject.Services
         {
             services.AddTransient<IAsyncDataService, AsyncDataService>();
 
+            services.AddSingleton<ContactsRepository>();
+
             return services;
         }
     }

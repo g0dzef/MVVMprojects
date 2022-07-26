@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MVVMproject.MVVM.ViewModels;
+using MVVMproject.Services;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -39,7 +40,9 @@ namespace MVVMproject
 
         public static void ConfigureServices(HostBuilderContext host, IServiceCollection services)
         {
-            services.AddSingleton<MainWindowViewModel>();
+            services.RegisterViewModel();
+            services.RegisterServices();
+
         }
     }
 }

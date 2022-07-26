@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -46,6 +47,11 @@ namespace MVVMproject.MVVM.ViewModels
 
         private bool CanStartProcessCommandExecute(object p) => true;
         private void OnStartProcessCommandExecuted(object p)
+        {
+            new Thread(ComputeValue).Start();
+        }
+
+        private void ComputeValue()
         {
             DataValue = _asyncDataService.GetResult(DateTime.Now);
         }

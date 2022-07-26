@@ -2,6 +2,7 @@
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Threading;
 
 namespace MVVMproject.MVVM.ViewModels.Base
 {
@@ -11,7 +12,19 @@ namespace MVVMproject.MVVM.ViewModels.Base
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            var handlers = PropertyChanged;
+            if (handlers is null) return;
+
+            var invoketionList = handlers.GetInvocationList();
+            var arg = new PropertyChangedEventArgs(propertyName);
+
+            foreach (var action in invoketionList)
+            {
+                if (action.Target is DispatcherObject dispatcherObject)
+                    dispatcherObject.Dispatcher.Invoke(action, this, arg);
+                else
+                    action.DynamicInvoke(this, arg);
+            }
         }
 
         protected virtual bool Set<T>(ref T field, T value, [CallerMemberName] string propertyName = null)
